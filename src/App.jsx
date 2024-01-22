@@ -38,18 +38,18 @@ function App() {
       <div>
         <h1 className="text-2xl md:text-4xl text-orange-400 font-bold tracking-wider mb-8">Password Generatore</h1>
       </div>
-      <div className="bg-gray-700/30 w-[70vw] lg:w-[60vw] mt-4 rounded-md p-4 text-white">
-        <div className="rounded-md overflow-hidden flex mb-4">
+      <div className="bg-gray-700/30 w-[70vw] lg:w-[60vw] rounded-md mt-4 p-4 text-white">
+        <div className="w-full rounded-md overflow-hidden flex mb-4 mx-auto">
           <input
             type="text"
             value={password}
-            className="w-full p-2 text-orange-500 outline-none border-none tracking-wider text-xl"
+            className="w-full rounded-none p-2 text-orange-500 outline-none border-none tracking-wider text-xl"
             readOnly
             ref={passwordRef}
           />
           <button
             type="button"
-            className="bg-green-500 px-2 hover:text-orange-500 hover:bg-green-400 duration-300"
+            className="shrink-0 bg-green-500 px-2 hover:text-orange-500 hover:bg-green-400 duration-300"
             onClick={copyPassword}
           >Copy</button>
         </div>
@@ -67,7 +67,7 @@ function App() {
               onClick={() => setLength((prev) => prev + 1)}
             >+</button>
           </div>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             <input
               type="checkbox"
               id="addnumber"
@@ -75,7 +75,7 @@ function App() {
             />
             <label htmlFor="addnumber" className={`${addNum && 'text-orange-500'} cursor-pointer`}>Add Number</label>
           </div>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             <input
               type="checkbox"
               id="addchar"
