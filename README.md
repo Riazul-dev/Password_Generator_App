@@ -5,4 +5,6 @@ Used Hooks
   <li>useEffect</li>
   <li>useRef</li>
 
-
+# How to run
+please follow the below instructions to run this branch on your machine:
+1. Clone this repository
